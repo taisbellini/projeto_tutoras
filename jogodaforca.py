@@ -54,7 +54,7 @@ while fim == False:
     chute = getChute(erradas + certas)
 
     if chute in palavra:	
-        certas += chute
+        certas.append(chute)
 
         # Verifica se o jogador ganhou
         achouTodas = True
@@ -66,7 +66,7 @@ while fim == False:
             print('Sim! A palavra era "' + palavra + '"! Voce ganhou!')
             fim = True
     else:
-        erradas += chute
+        erradas.append(chute)
 
         # Verifica se o jogador ainda tem chances
         if len(erradas) == chances:
